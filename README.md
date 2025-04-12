@@ -115,8 +115,8 @@ We trained and evaluated several models:
 ### 4.1 Clone the Repo
 
 ```bash
-git clone https://github.com/yourusername/yourrepo.git
-cd yourrepo
+git clone https://github.com/vernenlim/DSA4263.git
+cd DSA4263
 ```
 ---
 
