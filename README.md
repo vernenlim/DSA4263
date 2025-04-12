@@ -9,11 +9,11 @@ _This project was done by: Duocai, Edwards, Faldho, Vernen_
 ## 📚 Table of Contents
 
 1. [Brief Summary](#1-brief-summary)
-   - [1.1 Introduce Our Dataset](#11-introduce-our-dataset)
+   - [1.1 Introducing Our Dataset](#11-introducing-our-dataset)
    - [1.2 Exploratory Data Analysis (EDA)](#12-eda)
    - [1.3 Feature Selection](#13-feature-selection)
-2. [Introduce Our Models](#2-our-models)
-   - [2.1 Model Results](#21-results-from-the-models)
+2. [Our Models](#2-our-models)
+   - [2.1 Results from the Models](#21-results-from-the-models)
 3. [Discussion](#3-discussion)
 4. [How to Run This Project](#4-how-to-run-this-project)
    - [4.1 Clone the Repo](#41-clone-the-repo)
@@ -74,11 +74,11 @@ Based on our insights from the EDA, we carefully selected features that contribu
 
 The following features were excluded from our model:
 
-- *nameOrig* and *nameDest*: These are anonymised identifiers for the sender and receiver of a transaction. While they may help in detecting specific account-level behaviours, they are high-cardinality categorical variables with no inherent meaning or patterns that generalise well across the dataset.
+- **nameOrig** and **nameDest**: These are anonymised identifiers for the sender and receiver of a transaction. While they may help in detecting specific account-level behaviours, they are high-cardinality categorical variables with no inherent meaning or patterns that generalise well across the dataset.
 
-- *step*: This represents the time of the transaction in hourly intervals. Initially, our analysis showed no obvious relationship between `step` and fraud occurrences, suggesting limited time-dependency. However, during model experimentation, we observed that including `step` notably improved the performance of the LightGBM model. This suggests that `step` may contain subtle temporal patterns or positional cues that are non-trivial to detect during EDA but are leveraged effectively by gradient boosting algorithms. As a result, we retained `step` in our final feature set for models like LightGBM.
+- **step**: This represents the time of the transaction in hourly intervals. Initially, our analysis showed no obvious relationship between `step` and fraud occurrences, suggesting limited time-dependency. However, during model experimentation, we observed that including `step` notably improved the performance of the LightGBM model. This suggests that `step` may contain subtle temporal patterns or positional cues that are non-trivial to detect during EDA but are leveraged effectively by gradient boosting algorithms. As a result, we retained `step` in our final feature set for LightGBM.
 
-- *isFlaggedFraud*: Although intended to indicate whether a transaction was flagged as suspicious, all known fraud cases had this field set to 0. Thus, it did not help in detecting actual fraud and was dropped.
+- **isFlaggedFraud**: Although intended to indicate whether a transaction was flagged as suspicious, all known fraud cases had this field set to 0. Thus, it did not help in detecting actual fraud and was dropped.
 
 As a result, we retained the most relevant numerical and categorical features that are directly linked to transaction behaviour, such as amount, type, oldbalanceOrg, newbalanceOrig, oldbalanceDest, and newbalanceDest.
 
@@ -130,7 +130,7 @@ Due to the dataset's large size, we were unable to upload it directly to this re
    To use it, make sure you have your Kaggle API credentials set up (see [Kaggle API setup guide](https://www.kaggle.com/docs/api)) and then run the following command:
 
    ```bash
-   python src/data/make_dataset.py
+   python src/data/download_dataset.py
    ```
 
 This will download and unzip the dataset into the Dataset/ folder.
