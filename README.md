@@ -158,14 +158,31 @@ We provide saved model files in the `Models/` directory:
 
 - `best_LGBM_model.txt`
 
-To load a model in your code, for example:
-
+To load the models, make sure you are in the root of the cloned repository (DSA4263/). Then, use the following Python code:
 ```python
+# Load the saved Logistic Regression Model
+import numpy as np
+from sklearn.linear_model import LogisticRegression
+
+# Load model parameters from .npz file
+data = np.load('Models/best_lr_model.npz')
+
+loaded_lr_model = LogisticRegression()
+loaded_lr_model.coef_ = data['coef']
+loaded_lr_model.intercept_ = data['intercept']
+loaded_lr_model.classes_ = data['classes']
+
+# Load the saved XGBoost model
+import xgboost as xgb
+
+loaded_xgb_model = xgb.XGBClassifier()
+loaded_xgb_model.load_model('Models/best_xgb_model.json')
+
 # Load the saved lightgbm
 import lightgbm as lgb
 
-model = lgb.Booster(model_file='best_LGBM_booster.txt')
+model = lgb.Booster(model_file='Models/best_LGBM_booster.txt')
 ```
-Use them to reproduce predictions without re-training.
+Now you can use them without re-training.
 
 ---
