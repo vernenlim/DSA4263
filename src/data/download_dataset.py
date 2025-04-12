@@ -33,16 +33,6 @@ def download_kaggle_dataset(
         )
         print("Download complete.")
 
-        # Rename the downloaded CSV if needed
-        if renamed_filename:
-            for fname in os.listdir(output_dir):
-                if fname.endswith(".csv"):
-                    original_path = os.path.join(output_dir, fname)
-                    renamed_path = os.path.join(output_dir, f"{renamed_filename}.csv")
-                    os.rename(original_path, renamed_path)
-                    print(f"Renamed '{fname}' to '{renamed_filename}.csv'")
-                    break
-
     except subprocess.CalledProcessError as e:
         print("Error downloading dataset:", e)
 
@@ -50,9 +40,8 @@ def download_kaggle_dataset(
 def main():
     dataset_folder = os.path.join("Dataset")
     dataset_slug = "rupakroy/online-payments-fraud-detection-dataset"
-    renamed_filename = "DSA4263_data_raw"
 
-    download_kaggle_dataset(dataset_slug, dataset_folder, renamed_filename)
+    download_kaggle_dataset(dataset_slug, dataset_folder)
 
 
 if __name__ == "__main__":
