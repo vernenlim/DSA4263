@@ -74,11 +74,11 @@ Based on our insights from the EDA, we carefully selected features that contribu
 
 The following features were excluded from our model:
 
-- *nameOrig** and *nameDest**: These are anonymised identifiers for the sender and receiver of a transaction. While they may help in detecting specific account-level behaviours, they are high-cardinality categorical variables with no inherent meaning or patterns that generalise well across the dataset.
+- *nameOrig* and *nameDest*: These are anonymised identifiers for the sender and receiver of a transaction. While they may help in detecting specific account-level behaviours, they are high-cardinality categorical variables with no inherent meaning or patterns that generalise well across the dataset.
 
-- *step**: This represents the time of the transaction in hourly intervals. Initially, our analysis showed no obvious relationship between `step` and fraud occurrences, suggesting limited time-dependency. However, during model experimentation, we observed that including `step` notably improved the performance of the LightGBM model. This suggests that `step` may contain subtle temporal patterns or positional cues that are non-trivial to detect during EDA but are leveraged effectively by gradient boosting algorithms. As a result, we retained `step` in our final feature set for models like LightGBM.
+- *step*: This represents the time of the transaction in hourly intervals. Initially, our analysis showed no obvious relationship between `step` and fraud occurrences, suggesting limited time-dependency. However, during model experimentation, we observed that including `step` notably improved the performance of the LightGBM model. This suggests that `step` may contain subtle temporal patterns or positional cues that are non-trivial to detect during EDA but are leveraged effectively by gradient boosting algorithms. As a result, we retained `step` in our final feature set for models like LightGBM.
 
-- *isFlaggedFraud**: Although intended to indicate whether a transaction was flagged as suspicious, all known fraud cases had this field set to 0. Thus, it did not help in detecting actual fraud and was dropped.
+- *isFlaggedFraud*: Although intended to indicate whether a transaction was flagged as suspicious, all known fraud cases had this field set to 0. Thus, it did not help in detecting actual fraud and was dropped.
 
 As a result, we retained the most relevant numerical and categorical features that are directly linked to transaction behaviour, such as amount, type, oldbalanceOrg, newbalanceOrig, oldbalanceDest, and newbalanceDest.
 
