@@ -161,12 +161,11 @@ We provide saved model files in the `Models/` directory:
 To load a model in your code, for example:
 
 ```python
-import
+# Load the saved lightgbm
+import lightgbm as lgb
 
-model = load("Notebooks/best_LGBM_model.txt")
-
-Use them to reproduce predictions without re-training.
-
+model = lgb.Booster(model_file='best_LGBM_booster.txt')
 ```
+Use them to reproduce predictions without re-training.
 
 ---
