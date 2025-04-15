@@ -16,7 +16,6 @@ _This project was done by: Duocai, Edwards, Faldho, Vernen_
     - [1.3 Feature Selection](#13-feature-selection)
   - [2. Our Models](#2-our-models)
     - [2.1 Results from the Models](#21-results-from-the-models)
-  - [| LightGBM         | 0.96    | 0.84      | 0.68           | 0.75     |](#-lightgbm----------096-----084-------068------------075-----)
   - [3. Discussion](#3-discussion)
   - [4. How to Run This Project](#4-how-to-run-this-project)
     - [4.1 Clone the Repo](#41-clone-the-repo)
