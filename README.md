@@ -8,18 +8,21 @@ _This project was done by: Duocai, Edwards, Faldho, Vernen_
 
 ## 📚 Table of Contents
 
-1. [Brief Summary](#1-brief-summary)
-   - [1.1 Introducing Our Dataset](#11-introducing-our-dataset)
-   - [1.2 Exploratory Data Analysis (EDA)](#12-eda)
-   - [1.3 Feature Selection](#13-feature-selection)
-2. [Our Models](#2-our-models)
-   - [2.1 Results from the Models](#21-results-from-the-models)
-3. [Discussion](#3-discussion)
-4. [How to Run This Project](#4-how-to-run-this-project)
-   - [4.1 Clone the Repo](#41-clone-the-repo)
-   - [4.2 Download Dataset](#42-download-dataset)
-   - [4.3 Run the Notebooks](#43-running-the-notebooks)
-   - [4.4 Load Our Trained Models](#44-load-our-trained-models)
+- [DSA4263 Project: Detecting Fraudulent Transactions in Banking](#dsa4263-project-detecting-fraudulent-transactions-in-banking)
+  - [📚 Table of Contents](#-table-of-contents)
+  - [1. Brief Summary](#1-brief-summary)
+    - [1.1 Introducing Our Dataset](#11-introducing-our-dataset)
+    - [1.2 EDA](#12-eda)
+    - [1.3 Feature Selection](#13-feature-selection)
+  - [2. Our Models](#2-our-models)
+    - [2.1 Results from the Models](#21-results-from-the-models)
+  - [| LightGBM         | 0.96    | 0.84      | 0.68           | 0.75     |](#-lightgbm----------096-----084-------068------------075-----)
+  - [3. Discussion](#3-discussion)
+  - [4. How to Run This Project](#4-how-to-run-this-project)
+    - [4.1 Clone the Repo](#41-clone-the-repo)
+    - [4.2 Download Dataset](#42-download-dataset)
+    - [4.3 Run the Notebooks](#43-run-the-notebooks)
+    - [4.4 Load Our Trained Models](#44-load-our-trained-models)
 
 ---
 
