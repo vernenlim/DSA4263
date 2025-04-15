@@ -97,16 +97,28 @@ We trained and evaluated several models:
 
 ### 2.1 Results from the Models
 
-| Model            | AUC-ROC | Precision | Recall (Fraud) | F1 Score |
-|------------------|---------|-----------|----------------|----------|
-| Logistic         | 0.89    | 0.20      | 0.60           | 0.30     |
-| XGBoost          | 0.97    | 0.85      | 0.72           | 0.78     |
-| LightGBM         | 0.96    | 0.84      | 0.68           | 0.75     |
+The table below shows the performance of various models in predicting fraudulent transactions, which are the minority class in our dataset. Given the class imbalance, we focused on Precision, Recall, F1-Score, and AUC-ROC.
+
+| Model                      | Precision | Recall (Fraud) | F1 Score | AUC-ROC |
+|----------------------------|-----------|----------------|----------|---------|
+| Linear Regression          | 100%      | 9%             | 16%      | —       |
+| Logistic Regression        | 87%       | 42%            | 56%      | 70.92%  |
+| Neural Network             | 10%       | 99%            | 18%      | 99.92%  |
+| XGBoost (Maximising Recall)| 48%       | 99%            | 65%      | 99.84%  |
+| XGBoost (Maximising F1)    | 95%       | 76%            | 84%      | 99.84%  |
+| LightGBM                   | 82%       | 78%            | 80%      | 94.46%  |
+
+Linear Regression, while achieving perfect precision, had poor recall and F1-Score, making it unsuitable for this classification task. Logistic Regression performed more consistently and served as a better baseline. The Neural Network achieved high recall but extremely low precision, resulting in too many false positives for practical use.
+
+We therefore focused on Logistic Regression, XGBoost, and LightGBM — the latter two gradient boosting models showed stronger balance across all metrics, making them more viable for real-world fraud detection.
+
 ---
 
 ## 3. Discussion
 
-...
+➡️ For the full discussion and analysis of these results, refer to the page:  
+[Discussion.md](Discussion.md)
+
 
 ---
 
