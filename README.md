@@ -119,7 +119,7 @@ We therefore focused on Logistic Regression, XGBoost, and LightGBM — the latte
 ## 3. Discussion
 
 ➡️ For the full discussion and analysis of these results, refer to the page:  
-[Discussion.pdf](Discussion.pdf)
+[Discussion.md](Discussion.md)
 
 
 ---
