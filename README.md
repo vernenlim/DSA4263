@@ -118,9 +118,15 @@ We therefore focused on Logistic Regression, XGBoost, and LightGBM — the latte
 
 ## 3. Discussion
 
-➡️ For the full discussion and analysis of these results, refer to the page:  
-[Discussion.md](Discussion.md)
+### 🧠 Key Discussion Points
 
+- Fraud detection systems must prioritise **recall** (catching fraud) while maintaining **AUC-ROC** (overall model effectiveness).
+- **Logistic Regression** serves as a fast, interpretable baseline for low-risk cases or tiered systems.
+- **XGBoost** delivers strong performance with complex fraud patterns, especially when tuned with oversampling and thresholds.
+- **LightGBM** offers faster training, making it ideal for frequent model updates in real-time banking environments.
+- A **tiered detection framework** combining all models allows banks to balance scalability, explainability, and accuracy.
+
+➡️ For full insights and rationale behind each model’s use, see the [📄 Full Discussion](Discussion.md).
 
 ---
 
