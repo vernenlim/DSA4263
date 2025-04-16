@@ -103,7 +103,7 @@ The table below shows the performance of various models in predicting fraudulent
 
 | Model                      | Precision | Recall (Fraud) | F1 Score | AUC-ROC |
 |----------------------------|-----------|----------------|----------|---------|
-| Linear Regression          | 100%      | 9%             | 16%      | —       |
+| Linear Regression          | 100%      | 9%             | 16%      | 94.25%  |
 | Logistic Regression        | 87%       | 42%            | 56%      | 70.92%  |
 | Neural Network             | 10%       | 99%            | 18%      | 99.92%  |
 | XGBoost (Maximising Recall)| 48%       | 99%            | 65%      | 99.84%  |
@@ -119,7 +119,7 @@ We therefore focused on Logistic Regression, XGBoost, and LightGBM — the latte
 ## 3. Discussion
 
 ➡️ For the full discussion and analysis of these results, refer to the page:  
-[Discussion.md](Discussion.md)
+[Discussion.pdf](Discussion.pdf)
 
 
 ---
